@@ -1,3 +1,222 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../ressources/polices/Roboto/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../ressources/polices/Shrikhand/Shrikhand-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Roboto", tahoma;
+  width: 1080px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #424242;
+  border-right: 1px solid #424242;
+  margin: 20px auto 20px auto;
+  border-radius: 20px;
+  font-weight: lighter;
+}
 
+.header {
+  background-color: #9356DC;
+  font-family: "Shrikhand", tahoma;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+}
+.header-btn {
+  display: none;
+}
+.header-titre h1 {
+  color: #424242;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 96%;
+  align-items: center;
+  border-radius: 20px;
+  justify-content: space-between;
+}
+.form__champs {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-left: 100px;
+}
+.form__champs__input {
+  background-color: #ffeefa;
+  width: 250px;
+}
+.form__champs label {
+  padding: 10px 0 0 0;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  background-color: #FF79DA;
+  width: 120px;
+}
+.form input {
+  border: none;
+  height: 2.5em;
+  font-size: 1em;
+  justify-content: center;
+  background-color: #ffeefa;
+}
+.form h2 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+.form h2 + p {
+  margin-top: 5px;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-ccm {
+  margin: 2%;
+  border: 1px solid #424242;
+  border-radius: 20px;
+  width: 96%;
+}
+
+ol {
+  max-width: 350px;
+  counter-reset: my-awesome-counter;
+  list-style: none;
+  padding-left: 40px;
+}
+ol li {
+  margin: 0 0 2rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+}
+ol li::before {
+  content: counter(my-awesome-counter);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  --size: 25px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  background: #9356DC;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px 0 #999;
+}
+ol li i {
+  width: 20px;
+  margin-right: 15px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#div_image1 {
+  background-image: url("../ressources/images/restaurants/image1.jpg");
+  width: 500px;
+  height: 300px;
+}
+
+#div_image2 {
+  background-image: url("../ressources/images/restaurants/image2.jpg");
+  width: 500px;
+  height: 300px;
+}
+
+#div_image3 {
+  background-image: url("../ressources/images/restaurants/image3.jpg");
+  width: 500px;
+  height: 300px;
+}
+
+#div_image4 {
+  background-image: url("../ressources/images/restaurants/image4.jpg");
+  width: 500px;
+  height: 300px;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  width: 1080px;
+}
+
+.conteneur {
+  margin: 20px;
+}
+.conteneur__image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.conteneur__notif-new {
+  position: relative;
+  top: -250px;
+  left: 400px;
+  width: 70px;
+  height: 25px;
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid #99E2D0;
+  background-color: #99E2D0;
+  border-radius: 10px;
+  margin: 0;
+}
+.conteneur__info-resto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.conteneur h2 {
+  margin: -20px 0 0 0;
+  padding-left: 20px;
+}
+.conteneur p {
+  margin: 0;
+  padding-left: 20px;
+}
+.conteneur i {
+  margin: -20px 20px 0 0;
+  padding-top: 0;
+  font-size: 2em;
+}
+
+.footer {
+  background-color: #424242;
+  color: white;
+  border-radius: 0 0 20px 20px;
+}
+.footer-titre {
+  font-family: "Shrikhand", tahoma;
+  margin: 1em 0 1em 1em;
+}
+.footer-conteneur {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0 1em 1em;
+}
+.footer-conteneur i {
+  width: 20px;
+  margin-right: 5px;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -4,76 +4,96 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <script src="https://kit.fontawesome.com/82f7548cd5.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<title>Oh My Food</title>
     </head>
     
     <body>
-        <header>
-            <div class="header__btn"></div>
-            <div class="header__titre">ohmyfood</div>
+        <header class="header">
+            <div class="header-btn">
+                <p><i class="fas fa-arrow-left"></i></p>
+            </div>
+            <div class="header-titre">
+                <h1>ohmyfood</h1>
+            </div>
         </header>
-        <form class="form__lieu">
-            <input type="text" id="recherche" name="recherche" value="Paris, Belleville"><br>
-            <p>Réservez le menu qui vous plait</p>
-            <p>Découvrez les meilleurs restaurants que nous avons trouvés pour vous</p>
-            <label for="recherche" id="label"><p>Rechercher</p></label><br>
+        <form class="form">
+            <div>
+                <h2>Réservez le menu qui vous plait</h2>
+                <p>Découvrez les meilleurs restaurants que nous avons trouvés pour vous</p>
+            </div>
+            <div class="form__champs">
+                <div class="form__champs__input"><i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="recherche" name="recherche" placeholder="Paris,Belleville"></div>
+                <label for="recherche" id="label">Rechercher</label>
+            </div>
         </form>
-        <main>
-            <article>
-                <p>Comment ça marche</p>
-                <div class="article__step">Choisissez un restaurant</div>
-                <div class="article__step">Créez votre menu</div>
-                <div class="article__step">Allez déguster au restaurant</div>
-            </article>
-            <section>
-                <div class="section__titre"><h2>restaurants</h2></div>
-                <div class="section__conteneur">
-                    <div class="section__conteneur__image"></div>
-                    <div class="section__conteneur__notifnew">New</div>
-                    <h2>À la française</h2>
-                    <p>Paris</p>
-                    <p><i class="far fa-heart"></i></p>
-                </div>
+        <main class="main">
+            <section class="section-ccm">
+                <article class="article">
+                    <p>Comment ça marche</p>
+                    <ol>
+                        <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                        <li><i class="fas fa-list-ul"></i>Créez votre menu</li>
+                        <li><i class="fas fa-store"></i>Allez déguster sur place</li>
+                    </ol>
+                </article>
             </section>
-            <section>
-                <div class="section__titre"><h2>restaurants</h2></div>
-                <div class="section__conteneur">
-                    <div class="section__conteneur__image"></div>
-                    <div class="section__conteneur__notifnew">New</div>
-                    <h2>La note enchantée</h2>
-                    <p>Paris</p>
-                    <p><i class="far fa-heart"></i></p>
+            <div class="article-titre"><h2>Restaurants</h2></div>
+            <section class="section">
+                <div class="conteneur">
+                    <div class="conteneur__image" id="div_image1"></div>
+                    <div class="conteneur__notif-new">New</div>
+                    <div class="conteneur__info-resto">
+                            <div>
+                                <h2>À la française</h2>
+                                <p>Paris</p>
+                            </div>
+                        <div><i class="far fa-heart"></i></div>
+                    </div>
                 </div>
-            </section>
-            <section>
-                <div class="section__titre"><h2>restaurants</h2></div>
-                <div class="section__conteneur">
-                    <div class="section__conteneur__image"></div>
-                    <div class="section__conteneur__notifnew">New</div>
-                    <h2>Le délice des papilles</h2>
-                    <p>Paris</p>
-                    <p><i class="far fa-heart"></i></p>
+                <div class="conteneur">
+                    <div class="conteneur__image" id="div_image2"></div>
+                    <div class="conteneur__notif-new">New</div>
+                    <div class="conteneur__info-resto">
+                        <div>
+                            <h2>La note enchantée</h2>
+                            <p>Paris</p>
+                        </div>
+                            <div><i class="far fa-heart"></i></div>
+                    </div>
                 </div>
-            </section>
-            <section>
-                <div class="section__titre"><h2>restaurants</h2></div>
-                <div class="section__conteneur">
-                    <div class="section__conteneur__image"></div>
-                    <div class="section__conteneur__notifnew">New</div>
-                    <h2>La palette du goût</h2>
-                    <p>Paris</p>
-                    <p><i class="far fa-heart"></i></p>
+                <div class="conteneur">
+                    <div class="conteneur__image" id="div_image3"></div>
+                    <div class="conteneur__notif-new">New</div>
+                    <div class="conteneur__info-resto">
+                        <div>
+                            <h2>Le délice des papilles</h2>
+                            <p>Paris</p>
+                        </div>
+                        <div><i class="far fa-heart"></i></div>
+                    </div>
+                </div>
+                <div class="conteneur">
+                    <div class="conteneur__image" id="div_image4"></div>
+                    <div class="conteneur__notif-new">New</div>
+                    <div class="conteneur__info-resto">
+                        <div>
+                            <h2>La palette du goût</h2>
+                            <p>Paris</p>
+                        </div>
+                    <div><i class="far fa-heart"></i></div>
+                    </div>
                 </div>
             </section>
         </main>
-        <footer>
-            <div class="footer__titre">ohmyfood</div>
-            <div class="footer__conteneur">
-                <div class="footer__conteneur__category">Suggérer un restaurant</div>
-                <div class="footer__conteneur__category">Devenir partenaire</div>
-                <div class="footer__conteneur__category">Mentions légales</div>
-                <div class="footer__conteneur__category">Contact</div>
+        <footer class="footer">
+            <div class="footer-titre">ohmyfood</div>
+            <div class="footer-conteneur">
+                <div class="footer-conteneur__category"><i class="fas fa-utensils"></i>Suggérer un restaurant</div>
+                <div class="footer-conteneur__category"><i class="fas fa-people-arrows"></i>Devenir partenaire</div>
+                <div class="footer-conteneur__category">Mentions légales</div>
+                <div class="footer-conteneur__category">Contact</div>
             </div>
         </footer>
     </body>
