@@ -1,0 +1,195 @@
+$couleur_primaire:#9356DC;
+$couleur_secondaire:#FF79DA;
+$couleur_tertiaire:#99E2D0;
+$couleur_footer:#424242;
+$couleur_border:#dce3e6;
+$mix_p_s:linear-gradient(325deg, $couleur_primaire,$couleur_secondaire);
+$mix_p_s_dark:linear-gradient(325deg, darken($couleur_primaire,25%),darken($couleur_secondaire,25%));
+
+
+@font-face
+{
+	font-family:'Roboto-thin';
+	src: url("../ressources/polices/Roboto/Roboto-Thin.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face
+{
+	font-family:'Roboto';
+	src: url("../ressources/polices/Roboto/Roboto-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face
+{
+	font-family:"Shrikhand";
+	src: url("../ressources/polices/Shrikhand/Shrikhand-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    font-family: 'Roboto-thin',tahoma;
+    width:1080px;
+    display:flex;
+    flex-direction: column;
+    margin:20px auto 20px auto;
+    border-radius: 20px;
+    background-color: lightgray;
+    
+    @media (max-width: 1079px) {
+        width:auto;
+        background-color: white;
+    }
+    
+    h2 {
+        font-family: 'Roboto', tahoma;
+    }
+    
+}
+
+main{
+    background-color: white;
+
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+}
+
+a{
+    text-decoration: none;
+    
+    &:visited{
+        color:black;
+    }
+}
+
+//-----------------------------------------------------------------------------//
+//Mise en forme du header//
+.header{
+    font-family: 'Shrikhand', tahoma;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position:relative;
+    height:70px;
+    
+    &-btn {
+        position: absolute;
+        left:40px;
+        top:15px;
+        &:hover{
+            color:$couleur_tertiaire;
+        }
+    }
+    
+    &-titre h1{
+        color: $couleur_footer;
+        text-align: center;
+    }
+}
+
+
+//-----------------------------------------------------------------------------//
+//Mise en forme des résultats de recherche//
+.img{
+    background-image: url('../ressources/images/restaurants/image1.jpg');
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:100%;
+}
+
+.menu{
+    margin-top: -80px;
+    background-color: white;
+    border-radius:40px 40px 0 0;
+    padding-top:20px;
+    
+    &__header{
+        margin:auto 20px auto 20px; 
+    }
+
+    &__phase{
+        margin:40px 20px auto 20px; 
+        
+        &__nom-plat{
+            margin-left: 20px;    
+        }
+    }
+    
+    h2{
+        font-family: 'Shrikhand', tahoma;
+    }
+    
+    h3{
+        text-transform: uppercase;
+        
+        .souligne-bleu{
+            display:inline;
+            border-bottom: 1px solid $couleur_tertiaire;
+        }
+    }
+    
+    h4{
+        font-family: 'Roboto', tahoma;
+        margin-bottom:0;
+    }
+    
+    span{
+        margin-top:5px;
+        display:flex;
+        justify-content: space-between;
+    }
+    p{
+        margin-top:0;
+    }
+    
+    .prix{
+         font-family: 'Roboto', tahoma;
+    }
+}
+
+.btn{
+    display:block;
+    color:white;
+    width:200px;
+    height:44px;
+    border-radius: 22px;
+    border: none;
+    background-image: $mix_p_s;
+    font-family:'Roboto', tahoma;
+    margin:60px auto 60px auto;
+    &:hover{
+        background-image: $mix_p_s_dark;
+    }
+}
+
+//-----------------------------------------------------------------------------//
+//Mise en forme du footer//
+
+.footer{
+    background-color: $couleur_footer;
+    color:white;
+    
+    
+    &-titre{
+        font-family: 'Shrikhand', tahoma;
+        margin:1em 0 1em 1em;
+    }
+    &-conteneur{
+        display:flex;
+        flex-direction: column;
+        margin:1em 0 0em 1em;
+        i{
+            width:20px;
+            margin-right: 5px;
+        }
+    }
+}

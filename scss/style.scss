@@ -3,6 +3,8 @@ $couleur_secondaire:#FF79DA;
 $couleur_tertiaire:#99E2D0;
 $couleur_footer:#424242;
 $couleur_border:#dce3e6;
+$mix_p_s:linear-gradient(325deg, $couleur_primaire,$couleur_secondaire);
+$mix_p_s_dark:linear-gradient(325deg, darken($couleur_primaire,25%),darken($couleur_secondaire,25%));
 
 
 @font-face
@@ -56,6 +58,15 @@ main{
 button:hover{
     cursor: pointer;
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+}
+
+a{
+    text-decoration: none;
+    
+    &:visited{
+        color:black;
+    }
+    
 }
 
 //-----------------------------------------------------------------------------//
@@ -148,9 +159,13 @@ button:hover{
         height:44px;
         border-radius: 22px;
         border: none;
-        background-image: linear-gradient(325deg, $couleur_primaire,$couleur_secondaire);
+        background-image: $mix_p_s;
         font-family:'Roboto', tahoma;
         margin-bottom: 30px;
+        &:hover{
+            background-image: $mix_p_s_dark;
+        }
+        
     }
 }
 

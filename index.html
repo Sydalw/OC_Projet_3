@@ -11,7 +11,7 @@
     <body>
         <main>
             <header class="header">
-                <div class="header-btn">
+                <div class="header-backbtn">
                     <p><i class="fas fa-arrow-left"></i></p>
                 </div>
                 <div class="header-titre">
@@ -24,11 +24,13 @@
                     <div class="search-form__conteneur__cadre-input">
                         <input type="text" id="recherche" name="recherche" placeholder="Paris,Belleville">
                     </div>
-                    <!--<label for="recherche" id="label">Rechercher</label>-->
                 </div>
                 <div class="search-form__titre">
                     <h2>Réservez le menu qui vous plait</h2>
                     <p>Découvrez les meilleurs restaurants que nous avons trouvés pour vous</p>
+                </div>
+                <div class="search-form__btn">
+                    <button class="btn">Explorez nos restaurants</button>
                 </div>
             </form>
             <section class="corps">
@@ -44,7 +46,7 @@
                     <h2>Restaurants</h2>
                 </div>
                 <section class="corps__results">
-                    <article class="corps__results__conteneur">
+                    <a href="./html/menu1.html"><article class="corps__results__conteneur">
                         <div class="corps__results__conteneur__image" id="div_image1"></div>
                         <div class="corps__results__conteneur__notif-new">New</div>
                         <div class="corps__results__conteneur__info-resto">
@@ -54,7 +56,7 @@
                                 </div>
                             <div><i class="far fa-heart"></i></div>
                         </div>
-                    </article>
+                        </article></a>
                     <article class="corps__results__conteneur">
                         <div class="corps__results__conteneur__image" id="div_image2"></div>
                         <div class="corps__results__conteneur__notif-new">New</div>
@@ -96,7 +98,7 @@
                     <div class="footer-conteneur__category"><i class="fas fa-utensils"></i>Suggérer un restaurant</div>
                     <div class="footer-conteneur__category"><i class="fas fa-people-arrows"></i>Devenir partenaire</div>
                     <div class="footer-conteneur__category">Mentions légales</div>
-                    <div class="footer-conteneur__category">Contact</div>
+                    <a mailto="wladys.lelong@gmail.com"><div class="footer-conteneur__category">Contact</div></a>
                 </div>
             </footer>
         </main>
