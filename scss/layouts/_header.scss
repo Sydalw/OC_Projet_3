@@ -1,0 +1,24 @@
+//-----------------------------------------------------------------------------//
+//Mise en forme du header//
+.header{
+    font-family: 'Shrikhand', tahoma;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position:relative;
+    height:70px;
+    
+    &-btn {
+        position: absolute;
+        left:40px;
+        top:15px;
+        &:hover{
+            color:$couleur_tertiaire;
+        }
+    }
+    
+    &-titre h1{
+        color: $couleur_footer;
+        text-align: center;
+    }
+}

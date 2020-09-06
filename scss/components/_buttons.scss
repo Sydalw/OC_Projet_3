@@ -1,0 +1,14 @@
+.btn{
+    display:block;
+    color:white;
+    width:200px;
+    height:44px;
+    border-radius: 22px;
+    border: none;
+    background-image: $mix_p_s;
+    font-family:'Roboto', tahoma;
+    margin:60px auto 60px auto;
+    &:hover{
+        background-image: $mix_p_s_dark;
+    }
+}

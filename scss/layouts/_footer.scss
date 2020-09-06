@@ -1,0 +1,25 @@
+//-----------------------------------------------------------------------------//
+//Mise en forme du footer//
+
+.footer{
+    background-color: $couleur_footer;
+    color:white;
+
+    &-titre{
+        font-family: 'Shrikhand', tahoma;
+        margin:1em 0 1em 1em;
+    }
+    &-conteneur{
+        display:flex;
+        flex-direction: column;
+        margin:1em 0 0em 1em;
+        i{
+            width:20px;
+            margin-right: 5px;
+        }
+    }
+    
+    a{
+        color:white;
+    }
+}

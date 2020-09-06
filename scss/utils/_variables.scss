@@ -1,0 +1,7 @@
+$couleur_primaire:#9356DC;
+$couleur_secondaire:#FF79DA;
+$couleur_tertiaire:#99E2D0;
+$couleur_footer:#424242;
+$couleur_border:#dce3e6;
+$mix_p_s:linear-gradient(325deg, $couleur_primaire,$couleur_secondaire);
+$mix_p_s_dark:linear-gradient(325deg, darken($couleur_primaire,25%),darken($couleur_secondaire,25%));

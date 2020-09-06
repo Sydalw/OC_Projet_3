@@ -1,0 +1,14 @@
+@import "./utils/variables";
+@import "./base/fonts";
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./base/base";
+@import "./components/buttons";
+@import "./layouts/class-menu";
+@import "./layouts/img-menu"; 
+
+//-----------------------------------------------------------------------------//
+//Mise en forme des résultats de recherche//
+.img{
+    background-image: url('../ressources/images/restaurants/image1.jpg');
+}

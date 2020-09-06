@@ -1,0 +1,49 @@
+//-----------------------------------------------------------------------------//
+//Mise en forme du formulaire//
+.search-form{
+    display:flex;
+    flex-direction: column;
+    margin: 40px auto 0px auto;
+    width:96%;
+    align-items: center;
+    border-radius:20px;
+    justify-content: space-between;
+
+    &__conteneur{
+        display:flex;
+        justify-content: center;
+        margin: auto;
+        
+            input{
+                border:none;
+                height:2.5em;
+                font-size: 1em;
+                justify-content: center;
+            }
+            
+            &__icone{
+                padding: 10px 4px 0 0;
+                margin: 0 20px 0 0;
+            }
+        
+            &__cadre-input{
+                border:1px solid white;
+                
+                &:hover{
+                    border:1px solid $couleur_tertiaire;
+                }
+            }
+        }
+    
+    h2{
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-weight: bolder;
+        text-align: center;
+    }
+    
+    h2 + p{
+        margin-top: 5px;
+        font-size: 14px;
+    } 
+}
