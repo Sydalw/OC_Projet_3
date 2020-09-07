@@ -12,28 +12,36 @@
     &__conteneur{
         display:flex;
         justify-content: center;
-        margin: auto;
+        margin:0;
+        width:100%;
+        border-top: 1px solid $couleur_border;
+        border-bottom: 1px solid $couleur_border;
         
-            input{
-                border:none;
-                height:2.5em;
-                font-size: 1em;
-                justify-content: center;
+        input{
+            border:1px solid white;
+            height:2.5em;
+            font-size: 1em;
+            justify-content: center;
+            width:250px;
+
+            &:placeholder-shown{
+                text-align: center;
             }
-            
-            &__icone{
-                padding: 10px 4px 0 0;
-                margin: 0 20px 0 0;
-            }
-        
-            &__cadre-input{
-                border:1px solid white;
-                
-                &:hover{
-                    border:1px solid $couleur_tertiaire;
-                }
+
+            &:focus{
+                background-color: lighten($couleur_secondaire,20%);
             }
         }
+            
+        &__icone{
+            padding: 10px 4px 0 0;
+            margin: 0 20px 0 0;
+        }
+
+        &__cadre-input{
+            border:1px solid white;
+        }
+}
     
     h2{
         margin-top: 20px;

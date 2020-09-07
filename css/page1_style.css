@@ -33,6 +33,9 @@
   width: 20px;
   margin-right: 5px;
 }
+.footer a {
+  color: white;
+}
 
 .header {
   font-family: "Shrikhand", tahoma;
@@ -83,10 +86,17 @@ button:hover {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
+  color: black;
 }
 a:visited {
   color: black;
+}
+
+.corps {
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
@@ -99,9 +109,24 @@ a:visited {
   background-image: linear-gradient(325deg, #9356DC, #FF79DA);
   font-family: "Roboto", tahoma;
   margin: 60px auto 60px auto;
+  position: relative;
+  z-index: 1;
 }
-.btn:hover {
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: linear-gradient(325deg, #541f94, #f900b4);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1000ms;
+  border-radius: 22px;
 }
 
 .menu {
@@ -123,7 +148,27 @@ a:visited {
   margin: 40px 20px auto 20px;
 }
 .menu__phase__nom-plat {
+  height: 80px;
   margin-left: 20px;
+  border: 1px solid #dce3e6;
+  border-radius: 20px;
+  padding: 0 10px 0 10px;
+  margin: 10px 0 10px 0;
+  position: relative;
+  z-index: 1;
+}
+.menu__phase__nom-plat:hover {
+  cursor: pointer;
+}
+.menu__phase__nom-plat:hover::after {
+  transform: scaleX(0.9);
+}
+.menu__phase__nom-plat::after {
+  content: "";
+  position: absolute;
+  transform-origin: right;
+  background-color: #99E2D0;
+  z-index: -1;
 }
 .menu h2 {
   font-family: "Shrikhand", tahoma;
