@@ -20,7 +20,9 @@
     &__phase{
         margin:40px 20px auto 20px; 
         
-        &__nom-plat{
+        &__plat{
+            display:flex;
+            justify-content: space-between;
             height:80px;
             margin-left: 20px;
             border:1px solid $couleur_border;
@@ -28,21 +30,41 @@
             padding: 0 10px 0 10px;
             margin: 10px 0 10px 0;
             position:relative;
-            z-index: 1;
-            
+            overflow: hidden;
+                
             &:hover{
                 cursor: pointer;
+                
                 &::after{
-                transform: scaleX(0.90);
+                    transform:translate(-100px,0);
+                    transition: transform 1000ms;
+                }
+                
+                .prix{
+                    transform:translate(-80px,0);
+                    transition: transform 1000ms;
                 }
             }
             
             &::after{
-                content:"";
-                position:absolute;
+                content:"\f058";
+                font-family: FontAwesome;
+                color:white;
+                padding-top: 30px;
+                font-size:20px;
+                text-align: center;
                 transform-origin: right;
+                position: absolute;
+                right:-100px;
+                top:0;
+                border-radius: 0 20px 20px 0;
+                height:80px;
+                width:80px;
                 background-color: $couleur_tertiaire;
-                z-index: -1;
+            }
+            
+            &__prix{
+                padding-top:35px;
             }
         }
     }
