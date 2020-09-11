@@ -14,11 +14,41 @@
         &__icone{
             padding-top:20px;
             font-size: 2em;
+            z-index:1;
+            position: relative;
+            
+            &:hover{
+                cursor: pointer;
+                
+                &::after{
+                    opacity:1;
+                }
+            }
+            
+            &::after{
+                content:"\f004";
+                font-family: FontAwesome;
+                color:$couleur_secondaire;
+                position:absolute;
+                top:22px;
+                right:0;
+                bottom:0;
+                left:0;
+                opacity: 0;
+                //z-index:-1;
+                transition: opacity 1000ms;
+            }
         }
     }
 
     &__phase{
         margin:40px 20px auto 20px; 
+        @for $k from 1 through 4 {
+            &:nth-child(#{$k}){
+                animation: anim-menu 3s #{$k}s backwards;
+            }
+        }
+        
         
         &__plat{
             display:flex;
@@ -31,7 +61,12 @@
             margin: 10px 0 10px 0;
             position:relative;
             overflow: hidden;
-                
+            @for $j from 1 through 4 {
+                &:nth-child(#{$j}){
+                    animation: anim-menu 3s #{$j}s backwards;
+                }
+            }
+            
             &:hover{
                 cursor: pointer;
                 
@@ -57,7 +92,6 @@
                 position: absolute;
                 right:-100px;
                 top:0;
-                border-radius: 0 20px 20px 0;
                 height:80px;
                 width:80px;
                 background-color: $couleur_tertiaire;
@@ -98,5 +132,15 @@
     
     .prix{
          font-family: 'Roboto', tahoma;
+    }
+}
+
+@keyframes anim-menu
+{
+    0% {
+       opacity:0;
+    }
+    100%{
+        opacity:1;
     }
 }
