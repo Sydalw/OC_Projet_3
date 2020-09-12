@@ -17,26 +17,29 @@
             z-index:1;
             position: relative;
             
+            #coeur-plein{
+                position:absolute;
+                top:22px;
+                left:0;
+                background-image:$mix_p_s_dark;
+                background-repeat: no-repeat;
+                background-size: contain;
+                -webkit-background-clip: text;
+                color: transparent;
+                opacity:0;
+                transition: opacity 1500ms;
+            }
+            
             &:hover{
                 cursor: pointer;
                 
-                &::after{
+                & #coeur-vide{
+                    opacity:0;
+                }
+                
+                & #coeur-plein{
                     opacity:1;
                 }
-            }
-            
-            &::after{
-                content:"\f004";
-                font-family: FontAwesome;
-                color:$couleur_secondaire;
-                position:absolute;
-                top:22px;
-                right:0;
-                bottom:0;
-                left:0;
-                opacity: 0;
-                //z-index:-1;
-                transition: opacity 1000ms;
             }
         }
     }
@@ -45,7 +48,7 @@
         margin:40px 20px auto 20px; 
         @for $k from 1 through 4 {
             &:nth-child(#{$k}){
-                animation: anim-menu 3s #{$k}s backwards;
+                animation: anim-menu 3s #{($k*$k)-$k}s backwards;
             }
         }
         
