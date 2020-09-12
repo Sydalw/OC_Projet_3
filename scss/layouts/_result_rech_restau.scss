@@ -16,6 +16,7 @@
         display:flex;
         flex-wrap: wrap;
         width:auto;
+        justify-content: center;
     }
     
     &__conteneur{
@@ -23,7 +24,7 @@
     border-radius: 15px;
     
     @media (max-width: 1079px) {
-        margin:20px auto;
+        margin:20px 5px;
     }
     
         &:hover{
