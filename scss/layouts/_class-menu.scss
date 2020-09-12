@@ -64,6 +64,7 @@
             margin: 10px 0 10px 0;
             position:relative;
             overflow: hidden;
+
             @for $j from 1 through 4 {
                 &:nth-child(#{$j}){
                     animation: anim-menu 3s #{$j}s backwards;
@@ -73,9 +74,14 @@
             &:hover{
                 cursor: pointer;
                 
-                &::after{
+                & .fond-vert{
                     transform:translate(-100px,0);
                     transition: transform 1000ms;
+                    
+                    & .check-blanc{
+                        transform:rotate(720deg);
+                        transition: transform 1000ms;
+                    }
                 }
                 
                 .prix{
@@ -84,22 +90,24 @@
                 }
             }
             
-            &::after{
-                content:"\f058";
-                font-family: FontAwesome;
-                color:white;
-                padding-top: 30px;
-                font-size:20px;
-                text-align: center;
+            & .fond-vert{
+                background-color: $couleur_tertiaire;
                 transform-origin: right;
                 position: absolute;
                 right:-100px;
                 top:0;
                 height:80px;
                 width:80px;
-                background-color: $couleur_tertiaire;
+                
+                & .check-blanc{
+                    color:white;
+                    margin-top: 30px;
+                    font-size:20px;
+                    text-align: center;
+                    transform-origin: center;
+                }
             }
-            
+                        
             &__prix{
                 padding-top:35px;
             }
