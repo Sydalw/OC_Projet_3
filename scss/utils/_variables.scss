@@ -9,4 +9,9 @@ $my_counter:0;
 $i:0;
 $j:0;
 $k:0;
-$delay:0;
+$delay: (
+    delay1:0,
+    delay2:0,
+    delay3:4,
+    delay4:8
+);

@@ -267,6 +267,8 @@ ol li i {
 @media (max-width: 1079px) {
   .corps__results__conteneur {
     margin: 20px 5px;
+    width: auto;
+    height: auto;
   }
 }
 .corps__results__conteneur:hover {
@@ -280,6 +282,13 @@ ol li i {
   border-radius: 15px 15px 0 0;
   width: 500px;
   height: 300px;
+}
+@media (max-width: 1000px) {
+  .corps__results__conteneur__image {
+    margin: 20px 5px;
+    width: 400px;
+    height: auto;
+  }
 }
 .corps__results__conteneur__notif-new {
   position: relative;
@@ -300,6 +309,33 @@ ol li i {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.corps__results__conteneur__info-resto__icone {
+  padding-top: 0;
+  font-size: 14px;
+  z-index: 1;
+  position: relative;
+}
+.corps__results__conteneur__info-resto__icone .fas.fa-heart {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  background-image: linear-gradient(325deg, #541f94, #f900b4);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: opacity 1500ms;
+}
+.corps__results__conteneur__info-resto__icone:hover {
+  cursor: pointer;
+}
+.corps__results__conteneur__info-resto__icone:hover .far.fa-heart {
+  opacity: 0;
+}
+.corps__results__conteneur__info-resto__icone:hover .fas.fa-heart {
+  opacity: 1;
 }
 .corps__results__conteneur h2 {
   margin: -20px 0 0 0;
