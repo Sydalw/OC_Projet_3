@@ -20,7 +20,7 @@
         margin:40px 20px auto 20px; 
         @for $k from 1 through 4 {
             &:nth-child(#{$k}){
-                animation: anim-menu 3s #{map-get($delay, delay#{$k})}s backwards;
+                animation: anim-menu 3s #{$k}s backwards;
             }
         }
         
@@ -36,12 +36,16 @@
             margin: 10px 0 10px 0;
             position:relative;
             overflow: hidden;
-
-            @for $j from 1 through 4 {
+            
+            p, h4{
+            text-overflow: ellipsis; 
+            }
+                
+            /*@for $j from 1 through 4 {
                 &:nth-child(#{$j}){
                     animation: anim-menu 3s #{$j}s backwards;
                 }
-            }
+            }*/
             
             &:hover{
                 cursor: pointer;

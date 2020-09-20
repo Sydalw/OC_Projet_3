@@ -174,16 +174,16 @@ a:visited {
   margin: 40px 20px auto 20px;
 }
 .menu__phase:nth-child(1) {
-  animation: anim-menu 3s 0s backwards;
+  animation: anim-menu 3s 1s backwards;
 }
 .menu__phase:nth-child(2) {
-  animation: anim-menu 3s 0s backwards;
+  animation: anim-menu 3s 2s backwards;
 }
 .menu__phase:nth-child(3) {
-  animation: anim-menu 3s 4s backwards;
+  animation: anim-menu 3s 3s backwards;
 }
 .menu__phase:nth-child(4) {
-  animation: anim-menu 3s 8s backwards;
+  animation: anim-menu 3s 4s backwards;
 }
 .menu__phase__plat {
   display: flex;
@@ -196,18 +196,14 @@ a:visited {
   margin: 10px 0 10px 0;
   position: relative;
   overflow: hidden;
+  /*@for $j from 1 through 4 {
+      &:nth-child(0){
+          animation: anim-menu 3s 0s backwards;
+      }
+  }*/
 }
-.menu__phase__plat:nth-child(1) {
-  animation: anim-menu 3s 1s backwards;
-}
-.menu__phase__plat:nth-child(2) {
-  animation: anim-menu 3s 2s backwards;
-}
-.menu__phase__plat:nth-child(3) {
-  animation: anim-menu 3s 3s backwards;
-}
-.menu__phase__plat:nth-child(4) {
-  animation: anim-menu 3s 4s backwards;
+.menu__phase__plat p, .menu__phase__plat h4 {
+  text-overflow: ellipsis;
 }
 .menu__phase__plat:hover {
   cursor: pointer;
