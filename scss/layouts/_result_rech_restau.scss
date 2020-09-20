@@ -15,21 +15,21 @@
     width:1080px;
 
     @media (max-width: 1079px) {
-        display:flex;
-        flex-wrap: wrap;
+        /*display:flex;
+        flex-wrap: wrap;*/
         width:auto;
-        justify-content: center;
+        //justify-content: center;
     }
     
     &__conteneur{
     margin: 20px;
     border-radius: 15px;
     
-    @media (max-width: 1079px) {
+    /*@media (max-width: 1079px) {
         margin:20px 5px;
-        width:auto;
+        width:100%;
         height: auto;
-    }
+    }*/
     
         &:hover{
             cursor:pointer;
@@ -41,21 +41,22 @@
         background-position:center;
         background-size:100%;
         border-radius: 15px 15px 0 0;
-        width: 500px;
-        height: 300px; 
+        width: 100%;
+        height: 20em; 
                 
         /*@media (max-width: 1000px) {
             //margin:20px 5px;
             width:50%;
             background-size: cover;
-            //height: auto;
+            height: 10em;
         }*/
+            
         }
         
         &__notif-new{
             position:relative;
-            top:-250px;
-            left:400px;
+            top:-18em;
+            left:80%;
             width:70px;
             height:25px;
             text-align: center;
@@ -67,6 +68,7 @@
             color:green;
             font-family: 'Roboto', tahoma;
         }
+        
         &__info-resto{
             display:flex;
             flex-direction: row;
