@@ -285,9 +285,8 @@ ol li i {
 }
 @media (max-width: 1000px) {
   .corps__results__conteneur__image {
-    margin: 20px 5px;
-    width: 400px;
-    height: auto;
+    width: 50%;
+    background-size: cover;
   }
 }
 .corps__results__conteneur__notif-new {

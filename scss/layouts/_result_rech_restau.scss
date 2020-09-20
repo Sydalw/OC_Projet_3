@@ -45,9 +45,10 @@
         height: 300px; 
                 
         @media (max-width: 1000px) {
-            margin:20px 5px;
-            width:400px;
-            height: auto;
+            //margin:20px 5px;
+            width:50%;
+            background-size: cover;
+            //height: auto;
         }
         }
         
