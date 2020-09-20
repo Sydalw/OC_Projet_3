@@ -36,6 +36,9 @@
 .footer a {
   color: white;
 }
+.footer a:hover {
+  color: #99E2D0;
+}
 
 .header {
   font-family: "Shrikhand", tahoma;
@@ -178,6 +181,18 @@ ol li i {
   text-align: center;
 }
 
+.fas.fa-mobile-alt {
+  color: darkgrey;
+}
+
+.fas.fa-list-ul {
+  color: darkgrey;
+}
+
+.fas.fa-store {
+  color: #9356DC;
+}
+
 .corps__titre h2 {
   padding-left: 20px;
   font-weight: bolder;
@@ -206,6 +221,9 @@ ol li i {
   font-size: 1em;
   justify-content: center;
   width: 250px;
+}
+.search-form__conteneur input:hover {
+  border: 1px solid #99E2D0;
 }
 .search-form__conteneur input:placeholder-shown {
   text-align: center;
@@ -282,12 +300,12 @@ ol li i {
   border-radius: 15px 15px 0 0;
   width: 500px;
   height: 300px;
-}
-@media (max-width: 1000px) {
-  .corps__results__conteneur__image {
-    width: 50%;
-    background-size: cover;
-  }
+  /*@media (max-width: 1000px) {
+      //margin:20px 5px;
+      width:50%;
+      background-size: cover;
+      //height: auto;
+  }*/
 }
 .corps__results__conteneur__notif-new {
   position: relative;

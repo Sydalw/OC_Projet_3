@@ -23,7 +23,11 @@
             font-size: 1em;
             justify-content: center;
             width:250px;
-
+            
+            &:hover{
+                border:1px solid $couleur_tertiaire;
+            }
+            
             &:placeholder-shown{
                 text-align: center;
             }

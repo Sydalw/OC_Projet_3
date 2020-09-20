@@ -36,6 +36,9 @@
 .footer a {
   color: white;
 }
+.footer a:hover {
+  color: #99E2D0;
+}
 
 .header {
   font-family: "Shrikhand", tahoma;
