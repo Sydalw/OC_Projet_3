@@ -272,19 +272,12 @@ ol li i {
 }
 @media (max-width: 1079px) {
   .corps__results {
-    /*display:flex;
-    flex-wrap: wrap;*/
     width: auto;
   }
 }
 .corps__results__conteneur {
   margin: 20px;
   border-radius: 15px;
-  /*@media (max-width: 1079px) {
-      margin:20px 5px;
-      width:100%;
-      height: auto;
-  }*/
 }
 .corps__results__conteneur:hover {
   cursor: pointer;
@@ -297,12 +290,11 @@ ol li i {
   border-radius: 15px 15px 0 0;
   width: 100%;
   height: 20em;
-  /*@media (max-width: 1000px) {
-      //margin:20px 5px;
-      width:50%;
-      background-size: cover;
-      height: 10em;
-  }*/
+}
+@media (max-width: 500px) {
+  .corps__results__conteneur__image {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 .corps__results__conteneur__notif-new {
   position: relative;
