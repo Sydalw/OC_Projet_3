@@ -7,11 +7,13 @@
     justify-content: center;
     position:relative;
     height:70px;
+    padding-bottom: 20px;
     
     &-btn {
         position: absolute;
         left:40px;
-        top:15px;
+        top:5px;
+        font-size: 28px;
         &:hover{
             color:$couleur_tertiaire;
         }
@@ -20,5 +22,6 @@
     &-titre h1{
         color: $couleur_footer;
         text-align: center;
+        font-size: 38px;
     }
 }

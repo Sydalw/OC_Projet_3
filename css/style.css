@@ -47,11 +47,13 @@
   justify-content: center;
   position: relative;
   height: 70px;
+  padding-bottom: 20px;
 }
 .header-btn {
   position: absolute;
   left: 40px;
-  top: 15px;
+  top: 5px;
+  font-size: 28px;
 }
 .header-btn:hover {
   color: #99E2D0;
@@ -59,6 +61,7 @@
 .header-titre h1 {
   color: #424242;
   text-align: center;
+  font-size: 38px;
 }
 
 body {
@@ -112,6 +115,7 @@ a:visited {
   background-image: linear-gradient(325deg, #9356DC, #FF79DA);
   font-family: "Roboto", tahoma;
   margin: 60px auto 60px auto;
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.08);
   position: relative;
   z-index: 1;
 }
@@ -134,13 +138,15 @@ a:visited {
 
 .howto {
   margin: 0px 2% 40px 2%;
-  border: 1px solid #dce3e6;
   border-radius: 20px;
   width: 95%;
   padding-left: 10px;
+  background-color: white;
 }
 .howto p {
   font-family: "Roboto", tahoma;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 ol {
@@ -153,9 +159,10 @@ ol li {
   counter-increment: my-awesome-counter;
   position: relative;
   padding: 20px 0 0 20px;
-  border: 1px solid #dce3e6;
   border-radius: 20px;
   height: 40px;
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.08);
+  font-size: 18px;
 }
 ol li::before {
   content: counter(my-awesome-counter);
@@ -173,6 +180,9 @@ ol li::before {
   border-radius: 50%;
   text-align: center;
   box-shadow: 1px 1px 0 #999;
+}
+ol li:last-child {
+  background-color: #ffeefa;
 }
 ol li i {
   width: 20px;
@@ -201,8 +211,7 @@ ol li i {
 .search-form {
   display: flex;
   flex-direction: column;
-  margin: 40px auto 0px auto;
-  width: 96%;
+  width: 100%;
   align-items: center;
   border-radius: 20px;
   justify-content: space-between;
@@ -213,14 +222,15 @@ ol li i {
   margin: 0;
   width: 100%;
   border-top: 1px solid #dce3e6;
-  border-bottom: 1px solid #dce3e6;
+  background-color: #ededed;
 }
 .search-form__conteneur input {
-  border: 1px solid white;
+  border: 1px solid transparent;
   height: 2.5em;
   font-size: 1em;
   justify-content: center;
-  width: 250px;
+  width: 100%;
+  background-color: transparent;
 }
 .search-form__conteneur input:hover {
   border: 1px solid #99E2D0;
@@ -233,20 +243,20 @@ ol li i {
 }
 .search-form__conteneur__icone {
   padding: 10px 4px 0 0;
-  margin: 0 20px 0 0;
 }
 .search-form__conteneur__cadre-input {
-  border: 1px solid white;
+  border: 1px solid transparent;
 }
 .search-form h2 {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 0;
   font-weight: bolder;
   text-align: center;
 }
 .search-form h2 + p {
-  margin-top: 5px;
-  font-size: 14px;
+  margin-top: 25px;
+  font-size: 18px;
+  text-align: center;
 }
 
 #div_image1 {
@@ -275,9 +285,17 @@ ol li i {
     width: auto;
   }
 }
+@media (max-width: 600px) {
+  .corps__results {
+    display: block;
+  }
+}
 .corps__results__conteneur {
   margin: 20px;
   border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.08);
+  position: relative;
 }
 .corps__results__conteneur:hover {
   cursor: pointer;
@@ -285,28 +303,28 @@ ol li i {
 }
 .corps__results__conteneur__image {
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  background-size: 100%;
   border-radius: 15px 15px 0 0;
   width: 100%;
-  height: 20em;
+  height: 18em;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .corps__results__conteneur__image {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    height: 9em;
   }
 }
 .corps__results__conteneur__notif-new {
-  position: relative;
-  top: -18em;
-  left: 80%;
-  width: 70px;
+  position: absolute;
+  top: 2em;
+  right: 5%;
+  width: 90px;
   height: 25px;
   text-align: center;
   padding-top: 5px;
   border: 1px solid #99E2D0;
   background-color: #99E2D0;
-  border-radius: 10px;
+  border-radius: 4px;
   margin: 0;
   color: green;
   font-family: "Roboto", tahoma;
@@ -315,6 +333,9 @@ ol li i {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-content: center;
+  padding-bottom: 2em;
+  margin-top: 4em;
 }
 .corps__results__conteneur__info-resto__icone {
   padding-top: 0;
@@ -326,7 +347,7 @@ ol li i {
   position: absolute;
   top: 9px;
   left: 0;
-  background-image: linear-gradient(325deg, #541f94, #f900b4);
+  background-image: linear-gradient(325deg, #9356DC, #FF79DA);
   background-repeat: no-repeat;
   background-size: contain;
   -webkit-background-clip: text;
@@ -343,13 +364,21 @@ ol li i {
 .corps__results__conteneur__info-resto__icone:hover .fas.fa-heart {
   opacity: 1;
 }
+@media (max-width: 600px) {
+  .corps__results__conteneur__info-resto {
+    padding-bottom: 1em;
+    margin-top: 2em;
+  }
+}
 .corps__results__conteneur h2 {
   margin: -20px 0 0 0;
   padding-left: 20px;
+  font-weight: bold;
 }
 .corps__results__conteneur p {
   margin: 0;
   padding-left: 20px;
+  font-size: 20px;
 }
 .corps__results__conteneur i {
   margin: -20px 20px 0 0;

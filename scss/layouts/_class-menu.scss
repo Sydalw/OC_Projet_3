@@ -4,6 +4,7 @@
 .menu{
     margin-top: -80px;
     background-color: white;
+    //background-image: $couleur_fond;
     border-radius:40px 40px 0 0;
     padding-top:20px;
     
@@ -11,6 +12,7 @@
         display:flex;
         justify-content: space-between;
         margin:auto 20px auto 20px;
+        font-size:22px;
         
         @include coeur_vide-plein(20px,2em,22px)
         
@@ -30,12 +32,13 @@
             justify-content: space-between;
             height:80px;
             margin-left: 20px;
-            border:1px solid $couleur_border;
             border-radius: 20px;
             padding: 0 10px 0 10px;
-            margin: 10px 0 10px 0;
+            margin: 10px 0 20px 0;
             position:relative;
             overflow: hidden;
+            background-color: white;
+            box-shadow: 0px 4px 10px 5px rgba(0,0,0,0.08);
             
             p, h4{
             text-overflow: ellipsis; 
@@ -99,7 +102,7 @@
         
         .souligne-bleu{
             display:inline;
-            border-bottom: 1px solid $couleur_tertiaire;
+            border-bottom: 3px solid $couleur_tertiaire;
         }
     }
     
