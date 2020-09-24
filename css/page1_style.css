@@ -55,6 +55,11 @@
   top: 5px;
   font-size: 28px;
 }
+@media (max-width: 350px) {
+  .header-btn {
+    left: 10px;
+  }
+}
 .header-btn:hover {
   color: #99E2D0;
 }
@@ -176,20 +181,25 @@ a:visited {
 .menu__header__icone:hover .fas.fa-heart {
   opacity: 1;
 }
+@media (max-width: 400px) {
+  .menu__header {
+    font-size: 16px;
+  }
+}
 .menu__phase {
   margin: 40px 20px auto 20px;
 }
 .menu__phase:nth-child(1) {
-  animation: anim-menu 3s 1s backwards;
+  animation: anim-menu 3s 1s both;
 }
 .menu__phase:nth-child(2) {
-  animation: anim-menu 3s 2s backwards;
+  animation: anim-menu 3s 2s both;
 }
 .menu__phase:nth-child(3) {
-  animation: anim-menu 3s 3s backwards;
+  animation: anim-menu 3s 3s both;
 }
 .menu__phase:nth-child(4) {
-  animation: anim-menu 3s 4s backwards;
+  animation: anim-menu 3s 4s both;
 }
 .menu__phase__plat {
   display: flex;
@@ -227,8 +237,7 @@ a:visited {
   cursor: pointer;
 }
 .menu__phase__plat:hover .menu__phase__plat__nom {
-  transform: scalex(50%);
-  transition: transform 1000ms;
+  width: calc(100% - 130px);
 }
 .menu__phase__plat:hover .fond-vert {
   transform: translate(-100px, 0);
@@ -301,6 +310,7 @@ a:visited {
   }
   100% {
     opacity: 1;
+    transform: translateY(-15px);
   }
 }
 .img {

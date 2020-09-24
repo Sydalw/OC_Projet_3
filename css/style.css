@@ -55,6 +55,11 @@
   top: 5px;
   font-size: 28px;
 }
+@media (max-width: 350px) {
+  .header-btn {
+    left: 10px;
+  }
+}
 .header-btn:hover {
   color: #99E2D0;
 }
@@ -151,9 +156,14 @@ a:visited {
 }
 
 ol {
-  max-width: 100%;
+  max-width: 95%;
   counter-reset: my-awesome-counter;
   list-style: none;
+}
+@media (max-width: 600px) {
+  ol {
+    max-width: 80%;
+  }
 }
 ol li {
   margin: 0 0 2rem -1rem;

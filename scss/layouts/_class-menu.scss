@@ -14,15 +14,19 @@
         margin:auto 20px auto 20px;
         font-size:22px;
         
-        @include coeur_vide-plein(20px,2em,22px)
+        @include coeur_vide-plein(20px,2em,22px);
         
+        @media (max-width: 400px) {
+            font-size:16px;
+        }    
+            
     }
 
     &__phase{
         margin:40px 20px auto 20px; 
         @for $k from 1 through 4 {
             &:nth-child(#{$k}){
-                animation: anim-menu 3s #{$k}s backwards;
+                animation: anim-menu 3s #{$k}s both;
             }
         }
         
@@ -68,8 +72,7 @@
                 cursor: pointer;
                 
                 & .menu__phase__plat__nom{
-                    transform:scalex(50%);
-                    transition: transform 1000ms;
+                    width:calc(100% - 130px);
                 }
                 
                 & .fond-vert{
@@ -158,9 +161,11 @@
 @keyframes anim-menu
 {
     0% {
-       opacity:0;
+        opacity:0;
+        
     }
     100%{
         opacity:1;
+        transform:translateY(-15px);
     }
 }

@@ -16,9 +16,12 @@
 }
 
 ol {
-  max-width: 100%;
-  counter-reset: my-awesome-counter;
-  list-style: none;
+    max-width: 95%;
+    @media (max-width: 600px) {
+        max-width: 80%;
+    } 
+    counter-reset: my-awesome-counter;
+    list-style: none;
     
     li {
         margin: 0 0 2rem -1rem;
