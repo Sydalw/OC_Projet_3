@@ -222,6 +222,8 @@ a:visited {
 .menu__phase__plat__nom {
   text-overflow: ellipsis;
   overflow: hidden;
+  width: 100%;
+  transition: width 1000ms;
 }
 .menu__phase__plat p, .menu__phase__plat h4 {
   text-overflow: ellipsis;
